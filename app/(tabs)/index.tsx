@@ -1,4 +1,4 @@
-import { View, StyleSheet } from 'react-native';
+import { View, StyleSheet, Text } from 'react-native';
 import * as ImagePicker from 'expo-image-picker';
 import{ useState } from 'react';
 import Button from '@/components/Button';
@@ -25,6 +25,7 @@ export default function Index() {
 
   return (
     <View style={styles.container}>
+    <Text> teste</Text>
       <View style={styles.imageContainer}>
         <ImageViewer imgSource={PlaceholderImage} selectedImage={selectedImage}/>
       </View>
