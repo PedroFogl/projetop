@@ -10,7 +10,7 @@ import ImageViewer from '../../components/ImageViewer';
 import IconButton from '../../components/IconButton';
 import EmojiPicker from '../../components/EmojiPicker';
 import EmojiList from '../../components/EmojiList';
-import EmojiSticker from '../../components/EmojiSticker';
+import EmojiSticker from '../../components/EmojiSticker';      
 
 const PlaceholderImage = require('@/assets/images/background-image.png');
 
@@ -20,7 +20,7 @@ export default function Index() {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [pickedEmoji, setPickedEmoji] = useState<ImageSourcePropType | undefined>();
   const [status, requestPermission] = MediaLibrary.usePermissions();
-  const imageRef = useRef<View>(null);
+  const imageRef = useRef<any>(null);
 
   const pickImageAsync = async () => {
     let result = await ImagePicker.launchImageLibraryAsync({
